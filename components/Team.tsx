@@ -76,8 +76,10 @@ const Team: React.FC = () => {
 
                 <div className="relative bg-cinematic-800 border border-gold-500/30 w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl animate-fade-in-up">
                     <button 
+                        type="button"
                         onClick={() => setSelectedMember(null)}
                         className="absolute top-4 right-4 text-cream-100/50 hover:text-gold-500 transition-colors z-10"
+                        aria-label="Cerrar perfil"
                     >
                         <X size={24} />
                     </button>
@@ -131,6 +133,16 @@ const Team: React.FC = () => {
                                 </div>
                             )}
                         </div>
+                    </div>
+
+                    <div className="border-t border-white/10 px-6 py-5 flex justify-center bg-cinematic-800 shrink-0">
+                        <button
+                            type="button"
+                            onClick={() => setSelectedMember(null)}
+                            className="w-full sm:w-auto px-10 py-3 text-xs uppercase tracking-[0.2em] font-bold text-cinematic-900 bg-gold-500 hover:bg-cream-100 transition-colors"
+                        >
+                            Cerrar
+                        </button>
                     </div>
                 </div>
             </div>
