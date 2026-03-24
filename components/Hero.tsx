@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ArrowRight, CheckCircle2, Loader2 } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 // Utility component for counting up numbers
 const Counter: React.FC<{ end: number; duration?: number; suffix?: string }> = ({ end, duration = 2000, suffix = '' }) => {
@@ -32,28 +32,6 @@ const Counter: React.FC<{ end: number; duration?: number; suffix?: string }> = (
 };
 
 const Hero: React.FC = () => {
-  const [status, setStatus] = useState<'idle' | 'processing' | 'confirmed'>('idle');
-
-  const handleCTA = (e: React.MouseEvent) => {
-    e.preventDefault();
-    setStatus('processing');
-    
-    // Simulate a brief "registration" of interest
-    setTimeout(() => {
-      setStatus('confirmed');
-      
-      // After showing confirmation, scroll to contact
-      setTimeout(() => {
-        const contactSection = document.getElementById('contact');
-        if (contactSection) {
-          contactSection.scrollIntoView({ behavior: 'smooth' });
-        }
-        // Reset after scroll finishes
-        setTimeout(() => setStatus('idle'), 1000);
-      }, 800);
-    }, 1000);
-  };
-
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-cinematic-900 pt-32 pb-12 md:pt-40 md:pb-20">
       {/* Background Image with Cinematic Pan */}
@@ -97,43 +75,15 @@ const Hero: React.FC = () => {
               Abogado con más de 38 años de experiencia, nuestro trabajo se mide en confianza y soluciones bien hechas.
             </p>
 
-            {/* CTA Button with Feedback */}
+            {/* CTA: llamada directa */}
             <div className="mb-12 animate-fade-in-up [animation-delay:300ms]">
-                <button 
-                  onClick={handleCTA}
-                  disabled={status !== 'idle'}
-                  className={`relative overflow-hidden group flex items-center gap-3 px-10 py-5 font-bold uppercase tracking-[0.2em] text-xs transition-all duration-500 ${
-                    status === 'idle' 
-                    ? 'bg-gold-500 text-cinematic-900 hover:bg-cream-100 shadow-[0_0_20px_rgba(230,181,70,0.3)]' 
-                    : 'bg-cinematic-800 text-gold-500 border border-gold-500/30'
-                  }`}
+                <a
+                  href="tel:+593984253809"
+                  className="group inline-flex items-center gap-3 px-10 py-5 font-bold uppercase tracking-[0.2em] text-xs bg-gold-500 text-cinematic-900 hover:bg-cream-100 shadow-[0_0_20px_rgba(230,181,70,0.3)] transition-all duration-500"
                 >
-                  <span className={`flex items-center gap-3 transition-all duration-300 ${status !== 'idle' ? 'opacity-0' : 'opacity-100'}`}>
-                    Consulta Inmediata
-                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                  </span>
-
-                  {/* Feedback Overlays */}
-                  {status === 'processing' && (
-                    <div className="absolute inset-0 flex items-center justify-center gap-2 animate-fade-in">
-                      <Loader2 size={18} className="animate-spin" />
-                      <span>Iniciando...</span>
-                    </div>
-                  )}
-
-                  {status === 'confirmed' && (
-                    <div className="absolute inset-0 flex items-center justify-center gap-2 text-green-400 animate-fade-in">
-                      <CheckCircle2 size={18} />
-                      <span>¡Solicitud Registrada!</span>
-                    </div>
-                  )}
-                </button>
-                
-                {status === 'confirmed' && (
-                   <p className="mt-3 text-gold-500/60 text-[10px] uppercase tracking-widest animate-pulse">
-                      Redireccionando a nuestra agenda...
-                   </p>
-                )}
+                  Consulta Inmediata
+                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </a>
             </div>
 
             {/* Stats Section */}
