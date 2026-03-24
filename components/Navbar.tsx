@@ -57,9 +57,7 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <a 
-            href="https://api.whatsapp.com/send/?phone=593984253809&text&type=phone_number&app_absent=0" 
-            target="_blank"
-            rel="noopener noreferrer"
+            href="tel:+59398425809"
             className="px-6 py-3 border border-gold-500/30 bg-gold-500/5 text-gold-500 text-xs lg:text-sm uppercase tracking-[0.15em] hover:bg-gold-500 hover:text-cinematic-900 transition-all duration-300 text-center leading-tight"
           >
             Consulta<br/>Inmediata
@@ -93,9 +91,7 @@ const Navbar: React.FC = () => {
           </a>
         ))}
          <a 
-            href="https://api.whatsapp.com/send/?phone=593984253809&text&type=phone_number&app_absent=0" 
-            target="_blank"
-            rel="noopener noreferrer"
+            href="tel:+59398425809"
             onClick={() => setIsOpen(false)}
             className="mt-8 px-10 py-4 bg-gold-500 text-cinematic-900 font-bold uppercase tracking-widest hover:bg-white transition-colors"
           >
