@@ -29,7 +29,9 @@ const Hook: React.FC = () => {
 
             <div className="flex flex-col items-center gap-4">
                 <a 
-                    href="#contact"
+                    href="https://api.whatsapp.com/send/?phone=593984253809&text&type=phone_number&app_absent=0"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-3 px-10 py-4 bg-gold-500 text-cinematic-900 font-bold text-xs uppercase tracking-[0.2em] hover:bg-cream-100 transition-all duration-300 shadow-[0_0_20px_rgba(230,181,70,0.3)] hover:scale-105"
                 >
                     Hablar con un Abogado
