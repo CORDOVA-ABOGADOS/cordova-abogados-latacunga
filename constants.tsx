@@ -137,7 +137,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
             'Presidente del Colegio de Abogados de Cotopaxi (2023-2026)',
             'Miembro del Directorio Principal del Colegio de Abogados de Cotopaxi (2023)'
         ],
-        image: 'https://i.postimg.cc/jjRMRQzm/IMG-0744.jpg'
+        image: 'https://i.postimg.cc/z5Hsg78R/PHOTO-2026-03-24-13-46-45.jpg'
     },
     {
         id: 'jose',

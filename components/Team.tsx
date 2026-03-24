@@ -10,6 +10,10 @@ const Team: React.FC = () => {
     if (id === 'patricio') {
       return 'object-top'; 
     }
+    if (id === 'carlos') {
+      // Slightly less zoom and more centered framing for face-forward portraits
+      return 'object-[center_20%] scale-[1.2]';
+    }
     return 'object-[center_5%] scale-[1.35]'; 
   };
 
