@@ -136,7 +136,7 @@ const Contact: React.FC = () => {
                                 </div>
                                 <div>
                                     <p className="text-gold-500 text-[10px] font-bold uppercase tracking-wider">Radio Novedades</p>
-                                    <p className="text-cream-100 text-xs italic">"Hablando Claro"</p>
+                                    <p className="text-cream-100 text-xs italic">"Desde lo positivo"</p>
                                     <p className="text-white/50 text-[10px] mt-0.5">Sábado 08:30 - 10:00</p>
                                 </div>
                             </div>
