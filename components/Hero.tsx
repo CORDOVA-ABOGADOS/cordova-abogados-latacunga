@@ -96,9 +96,9 @@ const Hero: React.FC = () => {
                     {/* Stat Item 1 */}
                     <div className="flex flex-col items-center md:items-start">
                         <span className="font-serif text-4xl md:text-5xl text-cream-100 font-medium mb-2">
-                           +<Counter end={1200} duration={4500} />
+                           +<Counter end={3200} duration={4500} />
                         </span>
-                        <span className="text-gold-500/80 text-[10px] uppercase tracking-[0.15em] font-medium">Casos Resueltos</span>
+                        <span className="text-gold-500/80 text-[10px] uppercase tracking-[0.15em] font-medium">Casos Ganados</span>
                     </div>
 
                     {/* Stat Item 2 */}
